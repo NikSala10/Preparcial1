@@ -25,7 +25,9 @@ class TaskList extends HTMLElement {
 		btn.addEventListener('submit', (e) =>  {
 			e.preventDefault()
 
+			// añadimo objeto, key and value
 			this.tasks.push({title: inputTitle.value, description: inputDescription.value, state: false})
+			// llamar metodo que añade la tarea
 			this.addTasks()
 		})
 	}

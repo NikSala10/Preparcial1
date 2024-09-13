@@ -15,6 +15,8 @@ class TaskItem extends HTMLElement {
 
 	attributeChangedCallback(propName, oldValue, newValue) {
 		this.render()
+
+		//propName: parametro o argumentos del componente, example, state, descrption, title
 		if (oldValue !== newValue) {
             this[propName] = propName === 'state' ? newValue === 'true' : newValue
             this.render()
